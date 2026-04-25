@@ -60,16 +60,20 @@ final class DynamicIslandModel: ObservableObject {
     func stop() async {
         ticker?.invalidate()
         ticker = nil
-        defer { liveOn = false }
         guard let id = activityID,
               let activity = Activity<PlaygroundActivityAttributes>.activities.first(where: { $0.id == id })
         else {
             status = "not running"
+            liveOn = false
             return
         }
         await activity.end(nil, dismissalPolicy: .immediate)
-        activityID = nil
-        status = "stopped"
+        // If a new activity was started during the await, leave its state alone.
+        if activityID == id {
+            activityID = nil
+            status = "stopped"
+            liveOn = false
+        }
     }
 
     private func startTicker() {
