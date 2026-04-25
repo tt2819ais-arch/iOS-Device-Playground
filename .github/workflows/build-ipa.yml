@@ -1,0 +1,88 @@
+name: Build unsigned IPA
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+  workflow_dispatch:
+  release:
+    types: [created]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build (unsigned)
+    runs-on: macos-15
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+          sw_vers
+
+      - name: Select Xcode
+        run: |
+          # Use the newest available Xcode on the runner
+          ls /Applications | grep -i Xcode || true
+          sudo xcode-select -s "$(ls -d /Applications/Xcode_*.app | sort -V | tail -n 1)"
+          xcodebuild -version
+
+      - name: Install XcodeGen
+        run: |
+          brew install xcodegen
+
+      - name: Generate Xcode project
+        run: |
+          xcodegen generate
+          ls -la
+
+      - name: Build archive (no codesign)
+        run: |
+          set -euxo pipefail
+          xcodebuild \
+            -project DevicePlayground.xcodeproj \
+            -scheme DevicePlayground \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination "generic/platform=iOS" \
+            -archivePath "$PWD/build/DevicePlayground.xcarchive" \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            DEVELOPMENT_TEAM="" \
+            ONLY_ACTIVE_ARCH=NO \
+            archive | xcpretty || (echo "build failed"; exit 1)
+
+      - name: Package .ipa
+        run: |
+          set -euxo pipefail
+          APP_PATH="build/DevicePlayground.xcarchive/Products/Applications/DevicePlayground.app"
+          if [ ! -d "$APP_PATH" ]; then
+            echo "App bundle not found at $APP_PATH" >&2
+            find build -name "*.app" -maxdepth 6 -print
+            exit 1
+          fi
+          mkdir -p build/Payload
+          cp -R "$APP_PATH" build/Payload/
+          (cd build && zip -qry DevicePlayground-unsigned.ipa Payload)
+          ls -la build/
+
+      - name: Upload .ipa artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DevicePlayground-unsigned-ipa
+          path: build/DevicePlayground-unsigned.ipa
+          if-no-files-found: error
+
+      - name: Attach to release
+        if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/DevicePlayground-unsigned.ipa

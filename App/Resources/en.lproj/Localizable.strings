@@ -1,0 +1,287 @@
+/* App */
+"app_title" = "Device Playground";
+"done" = "Done";
+"enabled" = "On";
+"disabled" = "Off";
+"not_available" = "Not available";
+"requires_permission" = "Requires permission";
+"requires_paid_dev_account" = "Requires paid Apple Developer account";
+"requires_real_device" = "Requires a real device";
+"granted" = "Granted";
+"denied" = "Denied";
+"unknown" = "Unknown";
+"error" = "Error";
+"start" = "Start";
+"stop" = "Stop";
+"trigger" = "Trigger";
+"clear" = "Clear";
+"copy" = "Copy";
+"copied" = "Copied!";
+"open" = "Open";
+
+/* Settings */
+"settings_title" = "Settings";
+"settings_appearance" = "Appearance";
+"settings_theme" = "Theme";
+"settings_language" = "Language";
+"settings_about" = "About";
+"settings_version" = "Version";
+"settings_build" = "Build";
+"settings_source" = "Source code";
+"theme_system" = "System";
+"theme_light" = "Light";
+"theme_dark" = "Dark";
+"lang_system" = "System";
+"lang_english" = "English";
+"lang_russian" = "Russian";
+
+/* Categories */
+"cat_notifications" = "Notifications";
+"cat_notifications_sub" = "Local, push, sounds, badges, action buttons";
+"cat_haptics" = "Vibration & Haptics";
+"cat_haptics_sub" = "Basic vibration, Taptic Engine patterns";
+"cat_audio" = "Audio & Sound";
+"cat_audio_sub" = "Playback, recording, background, volume";
+"cat_camera" = "Camera & Photo";
+"cat_camera_sub" = "Photo/video, gallery, QR, OCR";
+"cat_location" = "Location";
+"cat_location_sub" = "GPS, background, geofencing, compass";
+"cat_sensors" = "Device sensors";
+"cat_sensors_sub" = "Accelerometer, gyroscope, barometer, pedometer";
+"cat_health" = "Health & Fitness";
+"cat_health_sub" = "Apple Health, heart rate, steps, sleep";
+"cat_biometry" = "Biometry & Security";
+"cat_biometry_sub" = "Face ID / Touch ID, Keychain, encryption";
+"cat_network" = "Internet & Network";
+"cat_network_sub" = "HTTP, WebSocket, Bluetooth, Wi-Fi";
+"cat_storage" = "Files & Storage";
+"cat_storage_sub" = "Files, iCloud, cache, documents";
+"cat_system" = "System integrations";
+"cat_system_sub" = "Siri, Shortcuts, Spotlight, widgets";
+"cat_communication" = "Calls & system actions";
+"cat_communication_sub" = "Call, SMS, email, share, Safari";
+"cat_graphics" = "Graphics & UI";
+"cat_graphics_sub" = "Animations, gestures, AR";
+"cat_background" = "Background";
+"cat_background_sub" = "Background fetch, refresh, geo events";
+"cat_payments" = "Payments";
+"cat_payments_sub" = "In-App Purchases, subscriptions, Apple Pay";
+"cat_extras" = "Extras";
+"cat_extras_sub" = "CarPlay, HomeKit, AirDrop, NFC";
+
+/* Notifications module */
+"notif_local" = "Local notifications";
+"notif_local_desc" = "Schedule a local notification with sound and badge.";
+"notif_push" = "Push notifications";
+"notif_push_desc" = "Register for remote notifications and show device token.";
+"notif_actions" = "Action buttons";
+"notif_actions_desc" = "Notification with custom action buttons.";
+"notif_badge" = "Badge counter";
+"notif_badge_desc" = "Increase the app icon badge.";
+"notif_send_test" = "Send test in 3s";
+"notif_register" = "Register for push";
+"notif_show_actions" = "Show with actions";
+"notif_clear_badge" = "Clear badge";
+"notif_status_authorized" = "Notifications authorized";
+"notif_status_denied" = "Notifications denied";
+"notif_status_provisional" = "Provisional";
+"notif_request_permission" = "Request permission";
+"notif_token" = "Device token";
+"notif_last_action" = "Last action";
+
+/* Haptics module */
+"haptic_vibration" = "Basic vibration";
+"haptic_vibration_desc" = "System AudioServices vibration.";
+"haptic_impact" = "Impact feedback";
+"haptic_impact_desc" = "Light / medium / heavy / soft / rigid impacts.";
+"haptic_notification" = "Notification feedback";
+"haptic_notification_desc" = "Success / warning / error patterns.";
+"haptic_selection" = "Selection feedback";
+"haptic_selection_desc" = "Subtle tick when value changes.";
+"haptic_custom" = "Custom CHHaptic patterns";
+"haptic_custom_desc" = "Engine-driven pattern: rising buzz + sharp tap.";
+"haptic_play" = "Play";
+"haptic_light" = "Light";
+"haptic_medium" = "Medium";
+"haptic_heavy" = "Heavy";
+"haptic_soft" = "Soft";
+"haptic_rigid" = "Rigid";
+"haptic_success" = "Success";
+"haptic_warning" = "Warning";
+"haptic_error" = "Error";
+
+/* Audio */
+"audio_playback" = "Audio playback";
+"audio_playback_desc" = "Play a built-in sample tone.";
+"audio_record" = "Microphone recording";
+"audio_record_desc" = "Record audio and play back.";
+"audio_background" = "Background audio";
+"audio_background_desc" = "Continue audio playback when locked. Requires Audio background mode.";
+"audio_volume" = "System volume";
+"audio_volume_desc" = "Read current output volume (read-only on iOS).";
+"audio_play_tone" = "Play tone";
+"audio_stop" = "Stop";
+"audio_record_start" = "Start recording";
+"audio_record_stop" = "Stop & play";
+"audio_current_volume" = "Current volume";
+
+/* Camera */
+"camera_capture" = "Photo / video capture";
+"camera_capture_desc" = "Open the system camera.";
+"camera_gallery" = "Pick from gallery";
+"camera_gallery_desc" = "Show last picked image.";
+"camera_qr" = "QR / barcode";
+"camera_qr_desc" = "Scan a QR or barcode.";
+"camera_ocr" = "Text recognition (OCR)";
+"camera_ocr_desc" = "Vision text recognition on a captured image.";
+"camera_open" = "Open camera";
+"camera_pick" = "Pick photo";
+"camera_scan" = "Scan QR";
+"camera_recognize" = "Recognize text";
+
+/* Location */
+"loc_current" = "Current location";
+"loc_current_desc" = "One-shot GPS lookup.";
+"loc_background" = "Background tracking";
+"loc_background_desc" = "Continuous location updates. Requires Always permission.";
+"loc_geofence" = "Geofencing";
+"loc_geofence_desc" = "Monitor enter/exit on a 50 m circular region around current location.";
+"loc_compass" = "Compass / heading";
+"loc_compass_desc" = "Magnetic heading from CLLocationManager.";
+"loc_request_when_in_use" = "Request when in use";
+"loc_request_always" = "Request always";
+"loc_lat" = "Latitude";
+"loc_lon" = "Longitude";
+"loc_alt" = "Altitude";
+"loc_acc" = "Accuracy";
+"loc_heading" = "Heading";
+"loc_geofence_status" = "Region status";
+
+/* Sensors */
+"sens_accel" = "Accelerometer";
+"sens_accel_desc" = "Raw acceleration in g.";
+"sens_gyro" = "Gyroscope";
+"sens_gyro_desc" = "Rotation rate around X, Y, Z.";
+"sens_baro" = "Barometer";
+"sens_baro_desc" = "Pressure / relative altitude.";
+"sens_pedo" = "Pedometer";
+"sens_pedo_desc" = "Steps today (CMPedometer).";
+
+/* Health */
+"health_avail" = "Availability";
+"health_avail_desc" = "Whether HealthKit is available on this device.";
+"health_steps" = "Steps today";
+"health_steps_desc" = "Read step count from HealthKit (requires authorization & paid dev account for full features).";
+"health_hr" = "Heart rate";
+"health_hr_desc" = "Read latest heart rate sample.";
+"health_request_auth" = "Request authorization";
+"health_read" = "Read";
+
+/* Biometry */
+"bio_faceid" = "Face ID / Touch ID";
+"bio_faceid_desc" = "Authenticate with biometry.";
+"bio_keychain" = "Keychain storage";
+"bio_keychain_desc" = "Store and read a sample value securely.";
+"bio_crypto" = "AES-GCM encryption";
+"bio_crypto_desc" = "Encrypt/decrypt a string with CryptoKit.";
+"bio_authenticate" = "Authenticate";
+"bio_save" = "Save secret";
+"bio_load" = "Load secret";
+"bio_delete" = "Delete secret";
+"bio_encrypt" = "Encrypt";
+"bio_decrypt" = "Decrypt";
+
+/* Network */
+"net_http" = "HTTP request";
+"net_http_desc" = "GET https://api.github.com/zen.";
+"net_ws" = "WebSocket";
+"net_ws_desc" = "Connect to wss://echo.websocket.events and echo a message.";
+"net_ble" = "Bluetooth (BLE)";
+"net_ble_desc" = "Scan nearby BLE peripherals.";
+"net_wifi" = "Wi-Fi info";
+"net_wifi_desc" = "Read current SSID via NEHotspotNetwork (limited).";
+"net_send" = "Send";
+"net_connect" = "Connect";
+"net_disconnect" = "Disconnect";
+"net_scan" = "Scan";
+"net_devices_found" = "Devices found";
+
+/* Storage */
+"sto_files" = "FileManager";
+"sto_files_desc" = "Write, read and delete a file in Documents.";
+"sto_icloud" = "iCloud Documents";
+"sto_icloud_desc" = "Check iCloud container availability.";
+"sto_cache" = "URLCache";
+"sto_cache_desc" = "Inspect URLCache size.";
+"sto_documents" = "Open Documents folder";
+"sto_documents_desc" = "Show Files app integration via UIFileSharingEnabled.";
+"sto_write" = "Write";
+"sto_read" = "Read";
+"sto_delete" = "Delete";
+
+/* System */
+"sys_siri" = "Siri / Shortcuts";
+"sys_siri_desc" = "Donate a sample app intent.";
+"sys_spotlight" = "Spotlight";
+"sys_spotlight_desc" = "Add a searchable item.";
+"sys_widgets" = "Widgets";
+"sys_widgets_desc" = "Widget extension is added separately. This is a stub explaining what's needed.";
+"sys_donate" = "Donate intent";
+"sys_index" = "Index item";
+"sys_search_in_spotlight" = "Search 'Device Playground' in Spotlight";
+
+/* Communication */
+"com_call" = "Phone call";
+"com_call_desc" = "Open tel: link.";
+"com_sms" = "SMS";
+"com_sms_desc" = "Open Messages with prefilled text.";
+"com_email" = "Email";
+"com_email_desc" = "Compose mail in default client.";
+"com_safari" = "Open Safari";
+"com_safari_desc" = "Open URL in default browser.";
+"com_share" = "Share Sheet";
+"com_share_desc" = "Show UIActivityViewController.";
+"com_dial" = "Dial";
+"com_compose" = "Compose";
+"com_share_now" = "Share";
+
+/* Graphics */
+"gfx_anim" = "Animations";
+"gfx_anim_desc" = "Spring-based animated card.";
+"gfx_gestures" = "Gestures";
+"gfx_gestures_desc" = "Tap, drag, pinch, rotate.";
+"gfx_ar" = "AR (ARKit)";
+"gfx_ar_desc" = "Open a minimal ARView (requires real device).";
+"gfx_play" = "Play";
+"gfx_open_ar" = "Open AR";
+
+/* Background */
+"bg_fetch" = "Background fetch";
+"bg_fetch_desc" = "Schedule a BGAppRefreshTask.";
+"bg_processing" = "Background processing";
+"bg_processing_desc" = "Schedule a BGProcessingTask.";
+"bg_geo" = "Background location events";
+"bg_geo_desc" = "Use significant location changes (start/stop here).";
+"bg_schedule" = "Schedule";
+
+/* Payments */
+"pay_iap" = "In-App Purchases";
+"pay_iap_desc" = "Requires App Store Connect setup. Stub demonstrates StoreKit 2 product fetch.";
+"pay_subs" = "Subscriptions";
+"pay_subs_desc" = "Same StoreKit 2 path.";
+"pay_applepay" = "Apple Pay";
+"pay_applepay_desc" = "Apple Pay button availability.";
+"pay_check" = "Check availability";
+"pay_show_button" = "Show Apple Pay button";
+
+/* Extras */
+"ex_carplay" = "CarPlay";
+"ex_carplay_desc" = "Requires CarPlay entitlement (paid dev account).";
+"ex_homekit" = "HomeKit";
+"ex_homekit_desc" = "Requires HomeKit entitlement.";
+"ex_airdrop" = "AirDrop";
+"ex_airdrop_desc" = "AirDrop is exposed via the share sheet.";
+"ex_nfc" = "NFC tag reading";
+"ex_nfc_desc" = "Read NDEF tags. Requires entitlement.";
+"ex_share_for_airdrop" = "Open share sheet";
+"ex_start_nfc" = "Start NFC session";

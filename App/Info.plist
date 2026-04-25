@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleDisplayName</key>
+    <string>Device Playground</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundleLocalizations</key>
+    <array>
+        <string>en</string>
+        <string>ru</string>
+    </array>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <false/>
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <false/>
+    </dict>
+    <key>UILaunchScreen</key>
+    <dict>
+        <key>UIColorName</key>
+        <string>AccentColor</string>
+    </dict>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>audio</string>
+        <string>location</string>
+        <string>fetch</string>
+        <string>processing</string>
+        <string>remote-notification</string>
+        <string>bluetooth-central</string>
+    </array>
+    <key>UIFileSharingEnabled</key>
+    <true/>
+    <key>LSSupportsOpeningDocumentsInPlace</key>
+    <true/>
+    <key>NSCameraUsageDescription</key>
+    <string>Доступ к камере для фото, видео, QR и OCR / Camera access for photos, video, QR and OCR.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Доступ к микрофону для записи аудио / Microphone access for audio recording.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Доступ к галерее для выбора фото / Photo library access to pick photos.</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Сохранение фото в галерею / Save photos to library.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Геолокация для тестов GPS и компаса / Location for GPS and compass tests.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Фоновая геолокация и геофенсинг / Background location and geofencing.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Фоновая геолокация / Background location.</string>
+    <key>NSMotionUsageDescription</key>
+    <string>Доступ к датчикам движения / Motion sensors access.</string>
+    <key>NSHealthShareUsageDescription</key>
+    <string>Чтение данных HealthKit / HealthKit read access.</string>
+    <key>NSHealthUpdateUsageDescription</key>
+    <string>Запись данных HealthKit / HealthKit write access.</string>
+    <key>NSFaceIDUsageDescription</key>
+    <string>Аутентификация по Face ID / Face ID authentication.</string>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>Сканирование BLE устройств / BLE device scanning.</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>BLE периферия / BLE peripheral.</string>
+    <key>NSLocalNetworkUsageDescription</key>
+    <string>Локальная сеть и Wi-Fi / Local network and Wi-Fi info.</string>
+    <key>NSSiriUsageDescription</key>
+    <string>Голосовые команды Siri / Siri voice commands.</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>Распознавание речи / Speech recognition.</string>
+    <key>NSAppleMusicUsageDescription</key>
+    <string>Воспроизведение из Apple Music / Apple Music playback.</string>
+    <key>NSContactsUsageDescription</key>
+    <string>Демонстрация доступа к контактам / Contacts demo.</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Демонстрация календаря / Calendar demo.</string>
+    <key>NSRemindersUsageDescription</key>
+    <string>Демонстрация напоминаний / Reminders demo.</string>
+    <key>NSUserTrackingUsageDescription</key>
+    <string>Демонстрация прозрачности отслеживания / Tracking transparency demo.</string>
+    <key>NFCReaderUsageDescription</key>
+    <string>Чтение NFC меток / NFC tag reading.</string>
+    <key>NSNearbyInteractionUsageDescription</key>
+    <string>Взаимодействие с устройствами поблизости / Nearby interaction.</string>
+    <key>BGTaskSchedulerPermittedIdentifiers</key>
+    <array>
+        <string>com.tt2819ais.deviceplayground.fetch</string>
+        <string>com.tt2819ais.deviceplayground.processing</string>
+    </array>
+</dict>
+</plist>

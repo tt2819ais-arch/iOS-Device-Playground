@@ -1,0 +1,287 @@
+/* App */
+"app_title" = "Device Playground";
+"done" = "Готово";
+"enabled" = "Вкл";
+"disabled" = "Выкл";
+"not_available" = "Недоступно";
+"requires_permission" = "Нужно разрешение";
+"requires_paid_dev_account" = "Нужен платный Apple Developer";
+"requires_real_device" = "Только на реальном устройстве";
+"granted" = "Разрешено";
+"denied" = "Запрещено";
+"unknown" = "Неизвестно";
+"error" = "Ошибка";
+"start" = "Старт";
+"stop" = "Стоп";
+"trigger" = "Запустить";
+"clear" = "Очистить";
+"copy" = "Скопировать";
+"copied" = "Скопировано!";
+"open" = "Открыть";
+
+/* Settings */
+"settings_title" = "Настройки";
+"settings_appearance" = "Внешний вид";
+"settings_theme" = "Тема";
+"settings_language" = "Язык";
+"settings_about" = "О приложении";
+"settings_version" = "Версия";
+"settings_build" = "Сборка";
+"settings_source" = "Исходный код";
+"theme_system" = "Системная";
+"theme_light" = "Светлая";
+"theme_dark" = "Тёмная";
+"lang_system" = "Системный";
+"lang_english" = "Английский";
+"lang_russian" = "Русский";
+
+/* Categories */
+"cat_notifications" = "Уведомления";
+"cat_notifications_sub" = "Локальные, Push, звуки, бейджи, действия";
+"cat_haptics" = "Вибрация и тактильная отдача";
+"cat_haptics_sub" = "Простая вибрация и Taptic Engine";
+"cat_audio" = "Звук и аудио";
+"cat_audio_sub" = "Воспроизведение, запись, фон, громкость";
+"cat_camera" = "Камера и фото";
+"cat_camera_sub" = "Фото/видео, галерея, QR, OCR";
+"cat_location" = "Геолокация";
+"cat_location_sub" = "GPS, фон, геофенсинг, компас";
+"cat_sensors" = "Сенсоры устройства";
+"cat_sensors_sub" = "Акселерометр, гироскоп, барометр, шагомер";
+"cat_health" = "Здоровье и фитнес";
+"cat_health_sub" = "Apple Health: пульс, шаги, сон";
+"cat_biometry" = "Биометрия и безопасность";
+"cat_biometry_sub" = "Face ID / Touch ID, Keychain, шифрование";
+"cat_network" = "Интернет и сеть";
+"cat_network_sub" = "HTTP, WebSocket, Bluetooth, Wi-Fi";
+"cat_storage" = "Файлы и хранилище";
+"cat_storage_sub" = "Файлы, iCloud, кэш, документы";
+"cat_system" = "Системные интеграции";
+"cat_system_sub" = "Siri, Shortcuts, Spotlight, виджеты";
+"cat_communication" = "Связь и системные действия";
+"cat_communication_sub" = "Звонок, SMS, email, шаринг, Safari";
+"cat_graphics" = "Графика и UI";
+"cat_graphics_sub" = "Анимации, жесты, AR";
+"cat_background" = "Фоновая работа";
+"cat_background_sub" = "Background fetch, обновление, гео";
+"cat_payments" = "Платежи";
+"cat_payments_sub" = "In-App Purchases, подписки, Apple Pay";
+"cat_extras" = "Дополнительно";
+"cat_extras_sub" = "CarPlay, HomeKit, AirDrop, NFC";
+
+/* Notifications */
+"notif_local" = "Локальные уведомления";
+"notif_local_desc" = "Запланировать уведомление со звуком и бейджем.";
+"notif_push" = "Push-уведомления";
+"notif_push_desc" = "Регистрация и показ device token.";
+"notif_actions" = "Action-кнопки";
+"notif_actions_desc" = "Уведомление с кастомными действиями.";
+"notif_badge" = "Бейдж";
+"notif_badge_desc" = "Увеличить счётчик на иконке.";
+"notif_send_test" = "Отправить тест через 3с";
+"notif_register" = "Зарегистрировать Push";
+"notif_show_actions" = "Показать с действиями";
+"notif_clear_badge" = "Сбросить бейдж";
+"notif_status_authorized" = "Разрешено";
+"notif_status_denied" = "Запрещено";
+"notif_status_provisional" = "Условно";
+"notif_request_permission" = "Запросить разрешение";
+"notif_token" = "Device token";
+"notif_last_action" = "Последнее действие";
+
+/* Haptics */
+"haptic_vibration" = "Простая вибрация";
+"haptic_vibration_desc" = "Системная вибрация AudioServices.";
+"haptic_impact" = "Impact-отклик";
+"haptic_impact_desc" = "light / medium / heavy / soft / rigid.";
+"haptic_notification" = "Notification-отклик";
+"haptic_notification_desc" = "Успех / предупреждение / ошибка.";
+"haptic_selection" = "Selection-отклик";
+"haptic_selection_desc" = "Лёгкий тик при изменении значения.";
+"haptic_custom" = "Кастомные паттерны CHHaptic";
+"haptic_custom_desc" = "Паттерн через движок: нарастающий гул + удар.";
+"haptic_play" = "Запустить";
+"haptic_light" = "Лёгкий";
+"haptic_medium" = "Средний";
+"haptic_heavy" = "Сильный";
+"haptic_soft" = "Мягкий";
+"haptic_rigid" = "Жёсткий";
+"haptic_success" = "Успех";
+"haptic_warning" = "Предупреждение";
+"haptic_error" = "Ошибка";
+
+/* Audio */
+"audio_playback" = "Воспроизведение";
+"audio_playback_desc" = "Сыграть встроенный тон.";
+"audio_record" = "Запись с микрофона";
+"audio_record_desc" = "Записать и воспроизвести.";
+"audio_background" = "Фоновое аудио";
+"audio_background_desc" = "Продолжить воспроизведение при блокировке (нужен audio background mode).";
+"audio_volume" = "Громкость системы";
+"audio_volume_desc" = "Чтение текущей громкости (только чтение на iOS).";
+"audio_play_tone" = "Сыграть тон";
+"audio_stop" = "Стоп";
+"audio_record_start" = "Начать запись";
+"audio_record_stop" = "Стоп и проиграть";
+"audio_current_volume" = "Громкость";
+
+/* Camera */
+"camera_capture" = "Снять фото / видео";
+"camera_capture_desc" = "Открыть системную камеру.";
+"camera_gallery" = "Выбор из галереи";
+"camera_gallery_desc" = "Показать выбранное фото.";
+"camera_qr" = "QR / штрихкод";
+"camera_qr_desc" = "Сканировать QR или штрихкод.";
+"camera_ocr" = "Распознавание текста (OCR)";
+"camera_ocr_desc" = "Vision OCR по выбранному фото.";
+"camera_open" = "Открыть камеру";
+"camera_pick" = "Выбрать фото";
+"camera_scan" = "Сканировать QR";
+"camera_recognize" = "Распознать текст";
+
+/* Location */
+"loc_current" = "Текущая позиция";
+"loc_current_desc" = "Однократный запрос GPS.";
+"loc_background" = "Фоновое отслеживание";
+"loc_background_desc" = "Непрерывные обновления. Нужен Always.";
+"loc_geofence" = "Геофенсинг";
+"loc_geofence_desc" = "Зона 50 м вокруг текущей позиции, события входа/выхода.";
+"loc_compass" = "Компас / направление";
+"loc_compass_desc" = "Магнитное направление через CLLocationManager.";
+"loc_request_when_in_use" = "Спросить при использовании";
+"loc_request_always" = "Спросить всегда";
+"loc_lat" = "Широта";
+"loc_lon" = "Долгота";
+"loc_alt" = "Высота";
+"loc_acc" = "Точность";
+"loc_heading" = "Направление";
+"loc_geofence_status" = "Статус зоны";
+
+/* Sensors */
+"sens_accel" = "Акселерометр";
+"sens_accel_desc" = "Сырые ускорения (g).";
+"sens_gyro" = "Гироскоп";
+"sens_gyro_desc" = "Скорости вращения по X, Y, Z.";
+"sens_baro" = "Барометр";
+"sens_baro_desc" = "Давление / относительная высота.";
+"sens_pedo" = "Шагомер";
+"sens_pedo_desc" = "Шаги за сегодня (CMPedometer).";
+
+/* Health */
+"health_avail" = "Доступность";
+"health_avail_desc" = "Доступен ли HealthKit на устройстве.";
+"health_steps" = "Шаги за сегодня";
+"health_steps_desc" = "Чтение шагов из HealthKit (нужно разрешение и платный аккаунт для всех функций).";
+"health_hr" = "Пульс";
+"health_hr_desc" = "Последнее значение пульса.";
+"health_request_auth" = "Запросить разрешение";
+"health_read" = "Прочитать";
+
+/* Biometry */
+"bio_faceid" = "Face ID / Touch ID";
+"bio_faceid_desc" = "Аутентификация по биометрии.";
+"bio_keychain" = "Keychain";
+"bio_keychain_desc" = "Сохранить и прочитать секрет.";
+"bio_crypto" = "Шифрование AES-GCM";
+"bio_crypto_desc" = "Зашифровать/расшифровать строку (CryptoKit).";
+"bio_authenticate" = "Аутентифицироваться";
+"bio_save" = "Сохранить секрет";
+"bio_load" = "Загрузить секрет";
+"bio_delete" = "Удалить секрет";
+"bio_encrypt" = "Зашифровать";
+"bio_decrypt" = "Расшифровать";
+
+/* Network */
+"net_http" = "HTTP запрос";
+"net_http_desc" = "GET https://api.github.com/zen.";
+"net_ws" = "WebSocket";
+"net_ws_desc" = "wss://echo.websocket.events — эхо.";
+"net_ble" = "Bluetooth (BLE)";
+"net_ble_desc" = "Сканировать BLE устройства.";
+"net_wifi" = "Wi-Fi";
+"net_wifi_desc" = "Текущий SSID через NEHotspotNetwork (ограниченно).";
+"net_send" = "Отправить";
+"net_connect" = "Подключиться";
+"net_disconnect" = "Отключиться";
+"net_scan" = "Сканировать";
+"net_devices_found" = "Найдено устройств";
+
+/* Storage */
+"sto_files" = "FileManager";
+"sto_files_desc" = "Запись, чтение и удаление файла в Documents.";
+"sto_icloud" = "iCloud Documents";
+"sto_icloud_desc" = "Проверка доступности iCloud контейнера.";
+"sto_cache" = "URLCache";
+"sto_cache_desc" = "Размер URLCache.";
+"sto_documents" = "Папка Documents";
+"sto_documents_desc" = "Доступ к файлам через приложение Files (UIFileSharingEnabled).";
+"sto_write" = "Записать";
+"sto_read" = "Прочитать";
+"sto_delete" = "Удалить";
+
+/* System */
+"sys_siri" = "Siri / Shortcuts";
+"sys_siri_desc" = "Донат тестового App Intent.";
+"sys_spotlight" = "Spotlight";
+"sys_spotlight_desc" = "Добавить элемент в поиск.";
+"sys_widgets" = "Виджеты";
+"sys_widgets_desc" = "Виджет — отдельный extension target. Здесь — заглушка с описанием.";
+"sys_donate" = "Донат интента";
+"sys_index" = "Индексировать";
+"sys_search_in_spotlight" = "Найдите 'Device Playground' в Spotlight";
+
+/* Communication */
+"com_call" = "Звонок";
+"com_call_desc" = "Открыть tel: ссылку.";
+"com_sms" = "SMS";
+"com_sms_desc" = "Сообщения с готовым текстом.";
+"com_email" = "Email";
+"com_email_desc" = "Письмо в почтовом клиенте.";
+"com_safari" = "Открыть Safari";
+"com_safari_desc" = "Открыть URL в браузере по умолчанию.";
+"com_share" = "Share Sheet";
+"com_share_desc" = "Показать UIActivityViewController.";
+"com_dial" = "Позвонить";
+"com_compose" = "Написать";
+"com_share_now" = "Поделиться";
+
+/* Graphics */
+"gfx_anim" = "Анимации";
+"gfx_anim_desc" = "Spring-анимация карточки.";
+"gfx_gestures" = "Жесты";
+"gfx_gestures_desc" = "Тап, перетаскивание, пинч, поворот.";
+"gfx_ar" = "AR (ARKit)";
+"gfx_ar_desc" = "Минимальный ARView (нужно реальное устройство).";
+"gfx_play" = "Запустить";
+"gfx_open_ar" = "Открыть AR";
+
+/* Background */
+"bg_fetch" = "Background fetch";
+"bg_fetch_desc" = "Запланировать BGAppRefreshTask.";
+"bg_processing" = "Background processing";
+"bg_processing_desc" = "Запланировать BGProcessingTask.";
+"bg_geo" = "Гео-события в фоне";
+"bg_geo_desc" = "Significant location changes (старт/стоп).";
+"bg_schedule" = "Запланировать";
+
+/* Payments */
+"pay_iap" = "In-App Purchases";
+"pay_iap_desc" = "Нужны настройки в App Store Connect. StoreKit 2 fetch.";
+"pay_subs" = "Подписки";
+"pay_subs_desc" = "Тот же путь через StoreKit 2.";
+"pay_applepay" = "Apple Pay";
+"pay_applepay_desc" = "Доступность Apple Pay кнопки.";
+"pay_check" = "Проверить доступность";
+"pay_show_button" = "Показать Apple Pay";
+
+/* Extras */
+"ex_carplay" = "CarPlay";
+"ex_carplay_desc" = "Нужен CarPlay entitlement (платный dev).";
+"ex_homekit" = "HomeKit";
+"ex_homekit_desc" = "Нужен HomeKit entitlement.";
+"ex_airdrop" = "AirDrop";
+"ex_airdrop_desc" = "AirDrop доступен через Share Sheet.";
+"ex_nfc" = "Чтение NFC меток";
+"ex_nfc_desc" = "Чтение NDEF. Нужен entitlement.";
+"ex_share_for_airdrop" = "Открыть Share Sheet";
+"ex_start_nfc" = "Запустить NFC";
