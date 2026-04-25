@@ -252,14 +252,17 @@ jobs:
           </dict>
           </plist>
           EOF
+          # Try ad-hoc first; tolerate failure so we can fall back to development.
+          set +e
           xcodebuild -exportArchive \
             -archivePath "$PWD/build/DevicePlayground.xcarchive" \
             -exportOptionsPlist build/ExportOptions.plist \
             -exportPath "$PWD/build/export" \
             OTHER_CODE_SIGN_FLAGS="--keychain build.keychain" 2>&1 | tee build/xcodebuild-export.log
+          set -e
 
-          # Try ad-hoc first; if the profile is actually a development one, retry
           if [ ! -f "$PWD/build/export/DevicePlayground.ipa" ]; then
+            echo "ad-hoc export failed, retrying with method=development"
             sed -i '' 's/<string>ad-hoc<\/string>/<string>development<\/string>/' build/ExportOptions.plist
             xcodebuild -exportArchive \
               -archivePath "$PWD/build/DevicePlayground.xcarchive" \
@@ -268,6 +271,7 @@ jobs:
               OTHER_CODE_SIGN_FLAGS="--keychain build.keychain" 2>&1 | tee -a build/xcodebuild-export.log
           fi
           ls -la build/export/
+          test -f "$PWD/build/export/DevicePlayground.ipa"
 
       - name: Rename signed .ipa
         if: steps.have_secrets.outputs.have == 'true'
