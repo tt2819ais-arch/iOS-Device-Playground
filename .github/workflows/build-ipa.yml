@@ -46,6 +46,7 @@ jobs:
       - name: Build archive (no codesign)
         run: |
           set -euxo pipefail
+          mkdir -p build
           xcodebuild \
             -project DevicePlayground.xcodeproj \
             -scheme DevicePlayground \
@@ -58,7 +59,9 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             DEVELOPMENT_TEAM="" \
             ONLY_ACTIVE_ARCH=NO \
-            archive | xcpretty || (echo "build failed"; exit 1)
+            archive 2>&1 | tee build/xcodebuild.log
+          # Check archive succeeded
+          test -d "$PWD/build/DevicePlayground.xcarchive" || (echo "ARCHIVE NOT FOUND"; tail -200 build/xcodebuild.log; exit 1)
 
       - name: Package .ipa
         run: |
@@ -80,6 +83,14 @@ jobs:
           name: DevicePlayground-unsigned-ipa
           path: build/DevicePlayground-unsigned.ipa
           if-no-files-found: error
+
+      - name: Upload xcodebuild log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcodebuild-log
+          path: build/xcodebuild.log
+          if-no-files-found: ignore
 
       - name: Attach to release
         if: github.event_name == 'release'
