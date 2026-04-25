@@ -144,10 +144,18 @@ jobs:
           security set-keychain-settings -lut 21600 "$KC_PATH"
           security unlock-keychain -p "$KC_PASS" "$KC_PATH"
 
+          # Import the .p12 — both the private key and the certificate.
+          # NOTE: do NOT pass `-t cert` here; it restricts the import to
+          # certificate items and silently drops the private key, leaving
+          # `find-identity -p codesigning` empty.
           security import build/cert.p12 -k "$KC_PATH" \
             -P "$P12_PASSWORD" \
             -T /usr/bin/codesign -T /usr/bin/security -T /usr/bin/productbuild \
-            -t cert -f pkcs12 -A
+            -f pkcs12 -A
+          # Diagnostics
+          echo "Keychain contents after import:"
+          security dump-keychain "$KC_PATH" | grep -E '"(class|labl)"' | head -20 || true
+          security find-identity -v "$KC_PATH" || true
 
           # Add the keychain to the user search list (so codesign sees it).
           security list-keychains -d user -s "$KC_PATH" $(security list-keychains -d user | tr -d '"')
