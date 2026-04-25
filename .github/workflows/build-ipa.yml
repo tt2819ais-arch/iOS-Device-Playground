@@ -306,7 +306,7 @@ jobs:
   release-attach:
     name: Attach IPAs to release
     needs: [build-unsigned, build-signed]
-    if: github.event_name == 'release'
+    if: ${{ !cancelled() && needs.build-unsigned.result == 'success' && github.event_name == 'release' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
@@ -315,6 +315,9 @@ jobs:
       - name: Attach
         uses: softprops/action-gh-release@v2
         with:
+          # softprops/action-gh-release tolerates missing files when fail_on_unmatched_files
+          # is false, so the signed .ipa is attached only if the signed job succeeded.
+          fail_on_unmatched_files: false
           files: |
             artifacts/DevicePlayground-unsigned-ipa/DevicePlayground-unsigned.ipa
             artifacts/DevicePlayground-signed-ipa/DevicePlayground-signed.ipa
