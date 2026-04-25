@@ -32,7 +32,7 @@ final class HealthModel: ObservableObject {
         guard available, let type = HKQuantityType.quantityType(forIdentifier: .stepCount) else { return }
         let start = Calendar.current.startOfDay(for: Date())
         let predicate = HKQuery.predicateForSamples(withStart: start, end: Date(), options: .strictStartDate)
-        let query = HKStatisticsQuery(quantityType: type, quantitySamplesPredicate: predicate, options: .cumulativeSum) { _, stat, _ in
+        let query = HKStatisticsQuery(quantityType: type, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, stat, _ in
             let value = stat?.sumQuantity()?.doubleValue(for: .count()) ?? 0
             DispatchQueue.main.async { self.stepsToday = value }
         }
