@@ -15,6 +15,8 @@ final class DynamicIslandModel: ObservableObject {
     private var activityID: String?
     private var ticker: Timer?
 
+    deinit { ticker?.invalidate() }
+
     var areEnabled: Bool { ActivityAuthorizationInfo().areActivitiesEnabled }
 
     func start() {
