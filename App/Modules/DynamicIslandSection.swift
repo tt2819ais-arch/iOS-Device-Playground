@@ -22,6 +22,7 @@ final class DynamicIslandModel: ObservableObject {
     func start() {
         guard areEnabled else {
             lastError = "Live Activities disabled in system Settings."
+            liveOn = false
             return
         }
         let attrs = PlaygroundActivityAttributes(sessionName: sessionName)
@@ -36,10 +37,12 @@ final class DynamicIslandModel: ObservableObject {
             )
             activityID = activity.id
             status = "running id=\(activity.id.prefix(6))…"
+            liveOn = true
             startTicker()
         } catch {
             lastError = error.localizedDescription
             status = "failed"
+            liveOn = false
         }
     }
 
@@ -57,6 +60,7 @@ final class DynamicIslandModel: ObservableObject {
     func stop() async {
         ticker?.invalidate()
         ticker = nil
+        defer { liveOn = false }
         guard let id = activityID,
               let activity = Activity<PlaygroundActivityAttributes>.activities.first(where: { $0.id == id })
         else {
