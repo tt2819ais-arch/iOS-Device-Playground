@@ -337,7 +337,7 @@ jobs:
         if: always()
         run: |
           security delete-keychain "${KC_PATH:-$RUNNER_TEMP/build.keychain-db}" 2>/dev/null || true
-          rm -f build/cert.p12 build/profile.mobileprovision
+          rm -f build/cert.p12 build/cert.pem build/cert-modern.p12 build/profile.mobileprovision
 
   release-attach:
     name: Attach IPAs to release
