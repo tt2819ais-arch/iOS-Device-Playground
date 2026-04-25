@@ -2,7 +2,8 @@ import SwiftUI
 
 enum FeatureCategory: String, CaseIterable, Identifiable, Hashable {
     case notifications, haptics, audio, camera, location, sensors, health, biometry,
-         network, storage, systemIntegrations, communication, graphics, background, payments, extras
+         network, storage, systemIntegrations, communication, graphics, background, payments, extras,
+         dynamicIsland
 
     var id: String { rawValue }
 
@@ -24,6 +25,7 @@ enum FeatureCategory: String, CaseIterable, Identifiable, Hashable {
         case .background:           return "cat_background"
         case .payments:             return "cat_payments"
         case .extras:               return "cat_extras"
+        case .dynamicIsland:        return "cat_dynamic_island"
         }
     }
 
@@ -45,6 +47,7 @@ enum FeatureCategory: String, CaseIterable, Identifiable, Hashable {
         case .background:           return "cat_background_sub"
         case .payments:             return "cat_payments_sub"
         case .extras:               return "cat_extras_sub"
+        case .dynamicIsland:        return "cat_dynamic_island_sub"
         }
     }
 
@@ -66,6 +69,7 @@ enum FeatureCategory: String, CaseIterable, Identifiable, Hashable {
         case .background:           return "clock.arrow.2.circlepath"
         case .payments:             return "creditcard.fill"
         case .extras:               return "ellipsis.circle.fill"
+        case .dynamicIsland:        return "capsule.portrait.fill"
         }
     }
 
@@ -87,6 +91,7 @@ enum FeatureCategory: String, CaseIterable, Identifiable, Hashable {
         case .background:           return .gray
         case .payments:             return .green
         case .extras:               return .accentColor
+        case .dynamicIsland:        return .blue
         }
     }
 }
@@ -127,6 +132,7 @@ struct CategoryView: View {
         case .background:           BackgroundSection()
         case .payments:             PaymentsSection()
         case .extras:               ExtrasSection()
+        case .dynamicIsland:        DynamicIslandSection()
         }
     }
 }
