@@ -285,3 +285,18 @@
 "ex_nfc_desc" = "Read NDEF tags. Requires entitlement.";
 "ex_share_for_airdrop" = "Open share sheet";
 "ex_start_nfc" = "Start NFC session";
+
+/* Dynamic Island / Live Activities */
+"cat_dynamic_island" = "Dynamic Island";
+"cat_dynamic_island_sub" = "Live Activities & island content";
+"di_live_activity" = "Live Activity";
+"di_disabled" = "Live Activities are disabled in system Settings";
+"di_session_name" = "Session";
+"di_title" = "Title";
+"di_subtitle" = "Subtitle";
+"di_progress" = "Progress";
+"di_update" = "Update";
+"di_stop" = "Stop";
+"di_preview" = "Local preview";
+"di_preview_compact" = "Compact (island)";
+"di_preview_expanded" = "Expanded";

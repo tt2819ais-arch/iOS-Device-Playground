@@ -285,3 +285,18 @@
 "ex_nfc_desc" = "Чтение NDEF. Нужен entitlement.";
 "ex_share_for_airdrop" = "Открыть Share Sheet";
 "ex_start_nfc" = "Запустить NFC";
+
+/* Dynamic Island / Live Activities */
+"cat_dynamic_island" = "Dynamic Island";
+"cat_dynamic_island_sub" = "Live Activities и контент острова";
+"di_live_activity" = "Live Activity";
+"di_disabled" = "Live Activities выключены в системных настройках";
+"di_session_name" = "Сессия";
+"di_title" = "Заголовок";
+"di_subtitle" = "Подзаголовок";
+"di_progress" = "Прогресс";
+"di_update" = "Обновить";
+"di_stop" = "Остановить";
+"di_preview" = "Локальный превью";
+"di_preview_compact" = "Компактный (остров)";
+"di_preview_expanded" = "Развёрнутый";
