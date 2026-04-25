@@ -32,5 +32,8 @@ text = re.sub(
 # remove DynamicIslandSection.swift — Activity<Attrs>.request() will just
 # fail at runtime in the absence of the widget, and the in-app preview
 # still works.
+text = re.sub(r"\n        NSSupportsLiveActivities: true", "", text)
+text = re.sub(r"\n        NSSupportsLiveActivitiesFrequentUpdates: true", "", text)
+
 PATH.write_text(text)
 print("patched", PATH)
